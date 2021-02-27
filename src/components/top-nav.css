@@ -1,0 +1,43 @@
+.top-fixed{
+    margin-top: 60px;
+}
+.top-products{
+    display: flex;
+}
+.top-products .cart{
+    right: 12px;
+    position: absolute;
+}
+/* CSS for card item */
+.card{
+    height: 450px;
+    margin-bottom: 12px;
+}
+.card-subtitle{
+    height: 18px; 
+    display: block;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+.card-text{
+    height: 110px;
+}
+.card .btn{
+    position: absolute;
+    bottom: 16px;
+}
+@media (min-width: 766px) {
+    .navbar-text {
+        top: 0;
+        position: absolute;
+        right: 10px;
+    }
+    .navbar-light .navbar-toggler {
+        position: absolute;
+        left: 150px;
+        top: 6px;
+        outline: none;
+    }
+}
