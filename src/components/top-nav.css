@@ -4,9 +4,12 @@
 .top-products{
     display: flex;
 }
-.top-products .cart{
+.top-products .btn{
     right: 12px;
     position: absolute;
+}
+.top-products .cartImg{
+    height: 28px;
 }
 /* CSS for card item */
 .card{

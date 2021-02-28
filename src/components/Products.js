@@ -2,7 +2,7 @@ import React ,{ Component } from 'react';
 import axios from 'axios';
 import CardItem from './CardItem';
 import { Container, Row, Col } from 'reactstrap';
-import {CartContext} from '../Contexts/Cart';
+import CardModal from './CartModal';
 
 export default class Products extends Component{
     constructor(props){
@@ -24,11 +24,7 @@ export default class Products extends Component{
         return(<div className='products-comp'>
             <div className='top-products'>
                 <h2>Products</h2>
-                <div className='cart'>Cart  
-                    <CartContext.Consumer>
-                        {({cartItem})=><span> {cartItem.length}</span>}
-                    </CartContext.Consumer>
-                </div>
+                <CardModal/>
             </div>
             <Container>
                 <Row xs="1" sm="2" md="4">

@@ -5,7 +5,7 @@ import {
 } from 'reactstrap';
 import {CartContext} from '../Contexts/Cart';
 
-const CardItem = (props) => {
+const CardCartItem = (props) => {
     const {id, name, imgURL, description} = props.item; 
   return (
     <div>
@@ -15,13 +15,13 @@ const CardItem = (props) => {
           <CardTitle tag="h5">{name}</CardTitle>
           <CardSubtitle tag="h6" className="mb-2 text-muted">{id}</CardSubtitle>
           <CardText>{description}</CardText>
-            <CartContext.Consumer>
-              {({addItem})=><Button onClick={()=>addItem(props.item)}>Button</Button>}
-            </CartContext.Consumer> 
+          <CartContext.Consumer>
+            {({removeItem})=><Button onClick={()=>removeItem(props.item)}>Remove</Button>}
+          </CartContext.Consumer>
         </CardBody>
       </Card>
     </div>
   );
 };
 
-export default CardItem;
+export default CardCartItem;
